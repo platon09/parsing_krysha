@@ -6,7 +6,8 @@ class Apartments(models.Model):
 		max_length=64,
 		verbose_name = "Заголовок",
 		)
-	price = models.PositiveIntegerField(
+	price = models.CharField(
+		max_length=128,
 		verbose_name='Цена'
 		)
 	location = models.CharField(
