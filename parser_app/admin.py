@@ -5,7 +5,7 @@ from .models import Apartments
 
 
 class ApartmentsAdmin(admin.ModelAdmin):
-	list_display = {'name', 'price', 'location', 'url'} 
+	list_display = [field.name for field in Apartments._meta.fields]
 	form = ApartmentsForm
 
-admin.site.register(Apartments)
+admin.site.register(Apartments, ApartmentsAdmin)

@@ -7,7 +7,7 @@ class KryshaBot(scrapy.Spider):
 
 	start_urls = ['https://krisha.kz/prodazha/kvartiry/karaganda/?das[live.rooms]=5.100']
 
-	def parse(self, response):
+	def parse(self, response) -> item:
 		temp = "https://krisha.kz"
 
 		for apartment in response.css("div.a-card__header"):

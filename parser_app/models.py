@@ -18,6 +18,9 @@ class Apartments(models.Model):
 		verbose_name='Ссылка на объявление'
 		)
 
+	def __str__(self):
+		return "%s" % self.name
+
 	class Meta:
 		verbose_name = 'Квартира'
 		verbose_name_plural = 'Квартиры'
